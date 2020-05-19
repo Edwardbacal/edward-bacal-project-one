@@ -9,23 +9,30 @@
     <script src="https://kit.fontawesome.com/cecc6c5222.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    
+
+    <a href="#maincontent" class="skip-link" tabindex="1">Skip to main content.</a>
+
+<!-- NOTES 
+
+Focus states aren't cooperating - adding tabindex doesn't seem to do anything. 
+
+-->
 <!-- HEADER ////////////////////////////////////////////////////////////////////-->
     <header>
         <div class="wrapper">
             <nav class="top clearfix">
                 <ul>
-                    <li tabindex="1">
-                        <a href="#">Home</a>
+                    <li>
+                        <a href="#" tabindex="0">Home</a>
                     </li>
-                    <li tabindex="1">
-                        <a href="#">About</a>
+                    <li>
+                        <a href="#" tabindex="0">About</a>
                     </li>
-                    <li tabindex="1">
-                        <a href="#">Blog</a>
+                    <li>
+                        <a href="#" tabindex="0">Blog</a>
                     </li>
-                    <li tabindex="1">
-                        <a href="#">Contact</a>
+                    <li>
+                        <a href="#" tabindex="0">Contact</a>
                     </li>
                 </ul>   
             </nav>
@@ -52,19 +59,35 @@
 
 <!-- HAMBURGER HAMBURGER HAMBURGER -->
 
-    <div class="ham">
+    <div class="ham" tabindex="0">
         <i class="fas fa-bars"><p class="sr-only">Click to open navigation menu</p></i>
     
-        <nav class="ham-menu">
+        <nav class="ham-menu" tabindex="0">
             <ul>
-                <li tabindex="1"><a href="#">Home</a></li>
-                <li tabindex="1"><a href="#">About</a></li>
-                <li tabindex="1"><a href="#">Blog</a></li>
-                <li tabindex="1"><a href="#">Contact</a></li>
-                <li tabindex="1"></li><a href="#"><i class="fab fa-instagram"><p class="sr-only">instagram</p></i></a></li>
-                <li tabindex="1"></li><a href="#"><i class="fab fa-facebook-f"></i><p class="sr-only">facebook</p></a></li>
-                <li tabindex="1"></li><a href="#"><i class="fab fa-snapchat-ghost"><p class="sr-only">snapchat</p></i></a></li>
-                <li tabindex="1"></li><a href="#"><i class="fab fa-twitter"></i><p class="sr-only">twitter</p></a></li>
+                <li tabindex="0">
+                    <a href="#">Home</a>
+                </li>
+                <li tabindex="0">
+                    <a href="#">About</a>
+                </li>
+                <li tabindex="0">
+                    <a href="#">Blog</a>
+                </li>
+                <li tabindex="0">
+                    <a href="#">Contact</a>
+                </li>
+                <li tabindex="0">
+                    <a href="#"><i class="fab fa-instagram">
+                    <p class="sr-only">instagram</p></i></a>
+                </li>
+                <li tabindex="0">
+                    <a href="#"><i class="fab fa-facebook-f"></i><p class="sr-only">facebook</p></a>
+                </li>
+                <li tabindex="0">
+                    <a href="#"><i class="fab fa-snapchat-ghost"><p class="sr-only">snapchat</p></i></a>
+                </li>
+                <li tabindex="0"><a href="#"><i class="fab fa-twitter"></i><p class="sr-only">twitter</p></a>
+                </li>
             </ul>
         </nav>
 </div>
@@ -99,17 +122,17 @@
 <!-- SECTION 3: INFO LINKS ~ SECTION 3 ~ SECTION 3 -->
     
     <section class="info">
-        <div class="wrappe clearfixr">
+        <div class="wrapper clearfixr">
             <button>
-                <i class="far fa-images" tabindex="1"></i>
+                <i class="far fa-images" tabindex="2"></i>
                 <h3>catologue</h3>
             </button>
             <button class="events">
-                <i class="far fa-calendar-alt" tabindex="1"></i>
+                <i class="far fa-calendar-alt" tabindex="2"></i>
                 <h3>events</h3>
             </button>
             <button>
-                <i class="far fa-handshake" tabindex="1"></i>
+                <i class="far fa-handshake" tabindex="2"></i>
                 <h3 class="collabs">collaborations</h3>
             </button>
         </div>
@@ -142,10 +165,18 @@
         <div class="wrapper clearfix">
             <nav class="bottom">
                 <ul clearfix>
-                    <li tabindex="1"><a href="#">home</a></li>
-                    <li tabindex="1"><a href="#">blog</a></li>
-                    <li tabindex="1"><a href="#">gallery</a></li>
-                    <li tabindex="1"><a href="#">contact</a></li>
+                    <li>
+                        <a href="#" tabindex="0">home</a>
+                    </li>
+                    <li>
+                        <a href="#" tabindex="0">blog</a>
+                    </li>
+                    <li>
+                        <a href="#" tabindex="0">gallery</a>
+                    </li>
+                    <li>
+                        <a href="#" tabindex="0">contact</a>
+                    </li>
                 </ul>
             </nav>
 
@@ -168,7 +199,5 @@
     <div class="copyright">
         <p>Copyright ⓒ 2019 HackerYou</p>
     </div>
-
-
 </body>
 </html>

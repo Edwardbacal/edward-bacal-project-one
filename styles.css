@@ -81,8 +81,6 @@ span {
     color: #FABA63;
 }
 
-
-
 p {
     color: #ffffff;
     font-size: 18px; 
@@ -96,6 +94,18 @@ p {
     margin: 0 auto;
 }
 
+.skip-link {
+    position: absolute;
+    left: -1000px;
+    top: 5px;
+    z-index: 999;
+    background: white;
+    color: black;
+}
+
+.skip-link:focus {
+    left: 0;
+}
 
 /*  HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER  */
 
@@ -185,6 +195,13 @@ color: rgb(230, 70, 70);
 .ham-menu i {
     font-size: 35px;   
     color: #ffffff;
+}
+
+.ham-menu i:hover,
+.ham-menu a:hover,
+.ham-menu i:focus,
+.ham-menu a:focus{
+    color: rgb(230, 70, 70);
 }
 
 
@@ -380,6 +397,11 @@ input {
     margin: 6% 0 0 13%;
 }
 
+    h1 span{
+        font-size: 37px;
+        line-height: 1.1;
+    }
+
     h2{
             font-size: 40px;
         }
@@ -398,8 +420,8 @@ input {
         margin-top: 5%;
         width: 45%;
     }
-
 }
+
 /*  1060 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 @media(max-width: 1060px) {
