@@ -6,19 +6,27 @@
     <title>Edward Bacal Project 1</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/cecc6c5222.js" crossorigin="anonymous"></script>
 </head>
 <body>
     
 <!-- HEADER ////////////////////////////////////////////////////////////////////-->
-
     <header>
         <div class="wrapper">
             <nav class="top clearfix">
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li tabindex="1">
+                        <a href="#">Home</a>
+                    </li>
+                    <li tabindex="1">
+                        <a href="#">About</a>
+                    </li>
+                    <li tabindex="1">
+                        <a href="#">Blog</a>
+                    </li>
+                    <li tabindex="1">
+                        <a href="#">Contact</a>
+                    </li>
                 </ul>   
             </nav>
         </div>
@@ -27,19 +35,46 @@
 
         <nav class="social-media">
             <ul>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
+                <li>
+                    <a href="#"><i class="fab fa-instagram"><p class="sr-only">instagram link</p></i></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fab fa-facebook-f"></i><p class="sr-only">facebook link</p></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fab fa-snapchat-ghost"><p class="sr-only">snapchat link</p></i></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fab fa-twitter"></i><p class="sr-only">twitter link</p></a>
+                </li>
             </ul>
         </nav>
-    </header>
+
+<!-- HAMBURGER HAMBURGER HAMBURGER -->
+
+    <div class="ham">
+        <i class="fas fa-bars"><p class="sr-only">Click to open navigation menu</p></i>
+    
+        <nav class="ham-menu">
+            <ul>
+                <li tabindex="1"><a href="#">Home</a></li>
+                <li tabindex="1"><a href="#">About</a></li>
+                <li tabindex="1"><a href="#">Blog</a></li>
+                <li tabindex="1"><a href="#">Contact</a></li>
+                <li tabindex="1"></li><a href="#"><i class="fab fa-instagram"><p class="sr-only">instagram</p></i></a></li>
+                <li tabindex="1"></li><a href="#"><i class="fab fa-facebook-f"></i><p class="sr-only">facebook</p></a></li>
+                <li tabindex="1"></li><a href="#"><i class="fab fa-snapchat-ghost"><p class="sr-only">snapchat</p></i></a></li>
+                <li tabindex="1"></li><a href="#"><i class="fab fa-twitter"></i><p class="sr-only">twitter</p></a></li>
+            </ul>
+        </nav>
+</div>
+    </header>   
 
 <!-- SECTION 1: HAND CRAFTED 1 ~ SECTION 1 ~ SECTION 1 -->
 
     <section class="hand-crafted clearfix">
         <div class="wrapper">
-                <div class="rings">
+                <div class="gold-rings">
                     <img src="./assets/image-6@2x.png" alt="close up of hands putting on rings">
                 </div>
                 <h2>hand crafted</h2>
@@ -52,45 +87,87 @@
 
 <!-- SECTION 2: LATEST COLLECTION ~ SECTION 2 ~ SECTION 2 -->
 
-    <section class="latest-collection clearfix">
-        <div class="wrapper">
-                <h2>latest collection</h2>
-                <div class="three-photos">
-                <img src="./assets/image-2_2@2x.png" alt="gold and silver pendants">
-                <img src="./assets/image-4@2x.png" alt="two gold rings">
-                <img src="./assets/image-6@2x.png" alt="gold and pearl earrings">
+    <section class="latest">
+        <h2>latest collection</h2>
+        <div class="three-photos wrapper clearfix">
+            <img src="./assets/image-2_2@2x.png" alt="gold and silver pendants">
+            <img src="./assets/image-4@2x.png" alt="two gold rings" class="middle-photo">
+            <img src="./assets/image-3.jpg" alt="gold and pearl earrings" class="earrings">
         </div>
     </section>
 
-<!-- SECTION 3 ~ SECTION 3 ~ SECTION 3 -->
-
-    <nav class="info-links">
-        <ul">
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-            <li><a href=""></a></li>
-        </ul>
-    </nav>
+<!-- SECTION 3: INFO LINKS ~ SECTION 3 ~ SECTION 3 -->
     
+    <section class="info">
+        <div class="wrappe clearfixr">
+            <button>
+                <i class="far fa-images" tabindex="1"></i>
+                <h3>catologue</h3>
+            </button>
+            <button class="events">
+                <i class="far fa-calendar-alt" tabindex="1"></i>
+                <h3>events</h3>
+            </button>
+            <button>
+                <i class="far fa-handshake" tabindex="1"></i>
+                <h3 class="collabs">collaborations</h3>
+            </button>
+        </div>
+    </section>
 
 <!-- SECTION 4: SUSTAINABLE MATERIALS + MIX & MATCH ~ SECTION 4 ~ SECTION 4 -->
-<section class="sustainable-materials-mix">
-    <div class="sustainable">
-        <h2>sustainable materials</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla pulvinar tortor nulla elementum eleifend. Vestibulum consequat vestibulum felis pharetra luctus. Quisque interdum orci quis convalis dapibus. Vestibulum vitae tincidunt sem, a blandit sem. Quisque interdum orci.</p>
-        <button>read more</button>
-    </div>
-    <img src="./assets/image-2_2@2x.png" alt="person wearing a gold chain necklace">
-    <div class="mix">
-        <h2>mix & match</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla pulvinar tortor nulla elementum eleifend. Vestibulum consequat vestibulum felis pharetra luctus. Quisque interdum orci quis convalis dapibus. Vestibulum vitae tincidunt sem, a blandit sem. Quisque interdum orci.</p>
-        <button>read more</button>
-    </div>
-    <img src="./assets/image-3.jpg" alt="hand with two rings">
-    
-</section>
+
+    <section class="sustainable-mix clearfix">
+        <img class="necklace" src="./assets/image-2@2x.png" alt="person wearing a gold chain necklace">
+        <div class="wrapper clearfix">
+            <div class="sustainable-text">
+                <h2>sustainable materials</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla pulvinar tortor nulla elementum eleifend. Vestibulum consequat vestibulum felis pharetra luctus. Quisque interdum orci quis convalis dapibus. Vestibulum vitae tincidunt sem, a blandit sem. Quisque interdum orci.</p>
+                <button>read more</button>
+            </div>
+        </div>
+        <img class="silver-rings" src="./assets/image-2-copy@2x.png" alt="hand with two rings">
+        <div class=wrapper clearfix">
+            <div class="mix-text">
+                <h2>mix & match</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla pulvinar tortor nulla elementum eleifend. Vestibulum consequat vestibulum felis pharetra luctus. Quisque interdum orci quis convalis dapibus. Vestibulum vitae tincidunt sem, a blandit sem. Quisque interdum orci.</p>
+                <button>read more</button>
+            </div>
+        </div>
+    </section>
 
 <!-- FOOTER ~ FOOTER ~ FOOTER -->
+
+    <footer >
+        <div class="wrapper clearfix">
+            <nav class="bottom">
+                <ul clearfix>
+                    <li tabindex="1"><a href="#">home</a></li>
+                    <li tabindex="1"><a href="#">blog</a></li>
+                    <li tabindex="1"><a href="#">gallery</a></li>
+                    <li tabindex="1"><a href="#">contact</a></li>
+                </ul>
+            </nav>
+
+            <form action="#" method="#" class="form" name="form">
+                <h4>stay updated</h4>
+                <p>Subscribe to our newsletter to stay updated.</p>
+                <label for="email" class="sr-only">Your email address</label>
+                <input type="email" id="email" required placeholder="email address">
+                <button class="subscribe">subscribe</button>
+            </form>
+        
+            <div class="contact">
+                <h4>contact</h4>
+                <p>info@email.com | 123-456-7890</p>
+                <p>123 some road, Toronto, ON</p>
+                <p>A5A 5A5, Canada</p>
+            </div>
+        </div>
+    </footer>
+    <div class="copyright">
+        <p>Copyright ⓒ 2019 HackerYou</p>
+    </div>
 
 
 </body>

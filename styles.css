@@ -6,14 +6,19 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 
 .visuallyHidden:not(:focus):not(:active) { position: absolute; width: 1px; height: 1px; margin: -1px;border: 0;padding: 0;white-space: nowrap;clip-path: inset(100%);clip: rect(00 0 0);overflow: hidden;}
 
-/*  REFERENCE  
+/*  REFERENCE  + Notes
 
 Dark: #201E21
 Dark 2: #14171F
 Apricot: #FABA63
 White: #FFFFFF
 
-/*  🌍  GLOBAL STYLES  🌍  🌍  🌍  🌍  🌍  🌍  🌍  🌍  */
+The style sheet says p = 20 px, but 18px looks more correct
+focus states aren't working, even with tab index!
+
+The hamburger from the design isn't on fontawesome 
+
+/*  GLOBAL STYLES  🌍  🌍  🌍  🌍  🌍  🌍  🌍  🌍  */
 
 img {
     width: 100%;
@@ -22,69 +27,549 @@ img {
 h1, 
 h2, 
 h3, 
-button {
+h4,
+button,
+.bottom a {
     font-family: 'italiana';
     color: #ffffff;
     text-transform: uppercase;
 }
 
+h2{
+    font-size: 51px;
+}
+
+h3{
+    font-size: 30px;
+}
+
+h4 {
+    font-size: 25px;
+}
+
+button {
+    border: 3px solid #FABA63;
+    background: transparent;
+    padding: 10px;
+    font-size: 25px;
+}
+
+button:hover, 
+button:focus {
+    border: 3px solid rgb(230, 70, 70);
+}
+
+button i {
+    font-size: 50px;
+    padding: 25px;
+}
+
+a:hover,
+a:focus,
+li:hover, 
+li:focus,
+i:hover,
+i:focus {
+color: rgb(230, 70, 70);
+}
+
 p,
-li,
-li a,
+a,
+i,
 span {
     font-family: 'lato';
     color: #FABA63;
 }
 
-.wrapper{
+
+
+p {
+    color: #ffffff;
+    font-size: 18px; 
+    line-height: 29px;
+    font-weight: 300;
+}
+
+.wrapper {
     max-width: 1200px;
     width: 90%;
     margin: 0 auto;
 }
 
-/*  🗣  HEADER  🗣  🗣  🗣  🗣  🗣  🗣  🗣  🗣  */
+
+/*  HEADER HEADER HEADER HEADER HEADER HEADER HEADER HEADER  */
 
 header {
     background-image: url(./assets/header-2.jpg);
     background-size: cover;
     height: 100vh;
+    position: relative;
+}
+
+.top a{
+    font-size: 20px;
+    padding: 24px;
+    text-decoration: none;
+    float: left;
 }
 
 h1 {
     font-size: 162px; 
     line-height: 140.4px;
     text-align: right;
-    width: 40%;
+    width: 500px;
+    margin: 10% 0 0 13%;
 }
 
-h1 span{
+h1 span {
     font-size: 45px;
     line-height: 46px;
-    float: right
+    font-weight: 300;
+    float: right;
+    text-transform: capitalize;
 }
 
-.top a{
-    display: inline-block;
-    padding: 24px;
-    text-decoration: none;
-    float: left;
+.social-media {
+    position: absolute;
+    right: 20px;
+    bottom: 40px;
 }
+
+.social-media i {
+    color: #ffffff;
+    font-size: 25px;
+    padding: 10px;
+}
+
+.social-media i:hover, 
+.social-media i:focus {
+color: rgb(230, 70, 70);
+}
+
+/* HAMBURGER ~ HAMBURGER */
+
+.ham {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    display: none;
+}
+
+.ham i {
+    font-size: 60px;   
+    color: #ffffff;
+    padding: 0 0 30px 30px;
+}
+
+.ham-menu{
+    position: absolute;
+    top: 60px;
+    right: 0px;
+    text-align: right;
+} 
+
+.ham-menu li {
+    padding: 10px 0;
+}
+
+.ham-menu li:first-child {
+    padding-top: 20px;
+}
+
+.ham-menu a{
+    font-size: 25px;   
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.ham-menu i {
+    font-size: 35px;   
+    color: #ffffff;
+}
+
 
 /* SECTION 1: HAND CRAFTED 1 ~ SECTION 1 ~ SECTION 1 */
 
 .hand-crafted {
+    background-color: #14171F;
+    padding: 50px;
+}
+
+.hand-crafted h2 {
+    padding-top: 35px;
+}
+
+.hand-crafted p {
+    padding: 1% 0 3.5% 0;
+}
+
+.gold-rings {
+    float: left;
+    width: 30%;
+    min-width: 200px;
+    margin: 40px 40px 40px 0;
+}
+
+/* SECTION 2: LATEST COLLECTION  ~ SECTION 2 ~ SECTION 2 */
+
+.latest {
+    background-color: #201E21;
+    padding-bottom: 10%;
+}
+
+.latest h2{
+    text-align: center;
+    padding-bottom: 60px;
+    padding-top: 80px;
+}
+
+.three-photos img {
+    float: left;
+    width: calc((100% / 3) - (60px / 3))
+}
+
+.middle-photo {
+    margin: 0 30px;
+}
+
+/* SECTION 3: INFO LINKS ~ SECTION 3: INFO LINKS ~  SECTION 3: INFO LINKS ~  */
+
+.info{
+    background-color: #141414;
+}
+
+.info .wrapper {
+    width: 75%;
+}
+
+.info button {
+    border: none;
+    width: calc((100% / 3) - 3px);
+    padding: 35px 0 70px 0;
+}
+
+/* SECTION 4: SUSTAINABLE MATERIALS + MIX & MATCH ~ SECTION 4 ~ SECTION 4  */
+
+.sustainable-mix {
     background-color: #201E21;
 }
 
-.rings {
-float: left;
-width: 25%;
-padding: 50px;
+.sustainable-text {
+    float: left;
+    width: 43%;
+    margin: 7% 7% 0 0;
 }
 
-/* SECTION 1: LATEST COLLECTION  ~ SECTION 2 ~ SECTION 2 */
+.mix-text{
+    float: right;
+    width: 41%;
+    margin-top: 9%;
+}
 
-.three-photos img {
-    width: calc((100% / 3) - 15px);
-    padding: 15px;
+.sustainable-mix p{
+    padding: 2% 0 7% 0;
+}
+
+.sustainable-mix img{
+    width: 50%;
+}
+
+.necklace  {
+    float: right;
+}
+
+.silver-rings{ 
+    float: left;
+}
+
+
+/* FOOTER ~ FOOTER ~ FOOTER */
+
+footer {
+    background-color: #14171F;
+    padding: 75px 0;
+}
+
+.bottom {
+    float: left;
+    width: 22%;
+}
+
+.bottom a {
+    font-size: 20px;
+    line-height: 29px;
+    text-decoration: none;   
+}
+
+form {
+    text-align: center;
+    float: left;
+    width: 56%;
+}
+
+form p {
+    padding: 15px 0;
+}
+
+input {
+    padding: 9px;
+    width: 75%;
+}
+
+.placeholder {
+    font-family: 'lato';
+    font-size: 10px;
+    color: #8d8d8d;
+    font-weight: 300;
+}
+
+.subscribe {
+    background: #000000;
+    border: 3px solid #000000;
+    font-size: 15px;
+    width: 25%;
+    float: right;
+}
+
+.contact {
+    float: right;
+    text-align: right;
+    width: 22%;
+}
+
+.contact h4 {
+    padding-bottom: 10px;
+}
+
+.contact p {
+    padding: 0px 0;
+}
+
+.copyright p {
+    font-size: 15px;
+    background-color: black;
+    font-weight: 500;
+    text-align: center;
+    padding: 3px;
+    }
+
+/*  MEDIA QUERIES MEDIA QUERIES MEDIA QUERIES MEDIA QUERIES MEDIA QUERIES */
+
+/* 1155 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+ @media(max-width: 1155px) {
+
+    .wrapper{
+        width: 92%;
+    }
+
+    header {
+        size: cover;
+        height: 75vh;
+    }
+
+    .top a{
+    font-size: 17px;
+    }
+
+    h1 {
+    font-size: 120px; 
+    line-height: 100px;
+    text-align: right;
+    width: 380px;
+    margin: 6% 0 0 13%;
+}
+
+    h2{
+            font-size: 40px;
+        }
+
+    p {
+        font-size: 16px;
+    }
+
+    .sustainable-text {
+        margin: 5% 5% 0 0;
+        width: 45%;
+    }
+
+    .mix-text{
+        float: right;
+        margin-top: 5%;
+        width: 45%;
+    }
+
+}
+/*  1060 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+@media(max-width: 1060px) {
+
+        h2{
+                font-size: 30px;
+            }
+
+        h3 {
+            font-size: 25px;
+        }
+
+        p {
+            font-size: 14px;
+        }
+
+        .sustainable-text {
+            margin: 5% 5% 0 0;
+            width: 45%;
+        }
+
+        .mix-text{
+            float: right;
+            margin-top: 5%;
+        }
+}
+
+/*  805 ~ MOBILE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+ @media(max-width: 805px) {
+
+    header {
+        background-image: url(./assets/header-1.jpg);
+        height: 150vh;
+    }
+
+    .ham {
+        display: block;
+    }
+
+    .ham-menu {
+        top: -1000px;
+    }
+
+    .ham:hover .ham-menu,
+    .ham:focus .ham-menu {
+        top: 60px;
+    }
+
+    .top,
+    .social-media{
+            display: none;
+        }
+
+        h1{
+            font-size: 100px;
+            line-height: .88;
+            width: 280px;
+            margin: 0;
+            padding-top: 280px;
+        }
+
+        h1 span {
+            font-size: 30px;
+            line-height: 1;
+        }
+
+        h2,
+        h3,
+        h4 {
+            font-size: 40px;
+            text-align: center;
+        }
+
+        p {
+            font-size: 25px;
+            line-height: 1.8;
+        }
+
+        button{
+            margin: 5% 0 0 0;
+            margin-left: calc(50% - (157px / 2));
+        }
+
+        form button{
+            margin: 0;
+        }
+
+        .hand-crafted {
+            padding: 10% 0;
+        }
+
+    .hand-crafted h2 {
+        padding: 15px 0;
+}
+
+
+        .hand-crafted img {
+            padding-bottom: 10%;
+        }
+
+        .gold-rings {
+            width: 100%;
+            margin: 0;
+        }
+
+        .sustainable-mix img,    
+        .sustainable-text,
+        .mix-text {
+            width: 100%;
+        }
+
+        .info {
+            padding: 8%;
+        }
+        
+
+        .info button{
+            width: 100%;
+            padding: 4%;
+            margin: 0;
+        }
+
+        .earrings {
+            display: none;
+        }
+
+        .three-photos img {
+            width: 48%
+        }
+
+        .middle-photo {
+            margin: 0 0 0 4%;
+        }
+
+        .sustainable-text,
+        .mix-text {
+            padding: 10% 0%;
+        }
+
+        .bottom {
+            float: none;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .bottom a {
+            float: left;
+            width: 25%;
+            font-family: 'lato';
+            text-transform: capitalize;
+            font-weight: 300;
+        }
+
+        form {
+            float: none;
+            width: 100%;
+            padding: 11% 0 22% 0;
+        }
+
+        .contact {
+            float: none;
+            text-align: center;
+            width: 100%;
+        }
+
+        input,
+        .subscribe {
+            text-align: center;
+            width: 100%;
+            font-size: 25px;
+        }
 }
